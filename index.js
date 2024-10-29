@@ -80,6 +80,8 @@ async function runChecker(words) {
 // Example usage: Replace with your 12-word mnemonic
 mnemonicWords = ['coconut', 'milk', 'pink', 'cow', 'toilet', 'soap', 'shampoo', 'red', 'watermelon', 'light', 'sky', 'green'];
 mnemonicWords = ['settle', 'put', 'agree', 'gap', 'blame', 'volume', 'excess', 'jewel', 'scrub', 'setup', 'donkey', 'logic']; 
+mnemonicWords = ['ridge', 'left', 'spell', 'into', 'pencil', 'smile', 'pistol', 'amount', 'weapon', 'silk', 'place', 'liberty'];
+mnemonicWords = ["million","vanish","rail","motion","urge","heart","castle","uncle","argue","dwarf","sun","bomb"];
 const fword = mnemonicWords[0];
 
 // Run the checker with the example mnemonic

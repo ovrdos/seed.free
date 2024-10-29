@@ -7,7 +7,8 @@ async function generateBIP32Node() {
   try {
     // Generate a 12-word mnemonic (BIP39)
     const mnemonic = new Array(bip39.generateMnemonic());
-    console.log('Mnemonic:', mnemonic);
+    console.log('Mnemonic:', mnemonic.join(' ').split(' ').map((w) => w = '\"'+w+'\"').join(','));
+    exit
     // Convert mnemonic to seed
     const seed = await bip39.mnemonicToSeed(mnemonic);
 
@@ -15,7 +16,7 @@ async function generateBIP32Node() {
     const bip32 = BIP32Factory(ecc);
     const root = bip32.fromSeed(seed);
 
-    console.log('BIP32 Root Node:', root.toBase58());  // Print node in base58 format
+    //#console.log('BIP32 Root Node:', root.toBase58());  // Print node in base58 format
 
     // Derive a Bitcoin address from the root node
     const child = root.derivePath("m/44'/0'/0'/0/0");  // Derivation path for BTC
